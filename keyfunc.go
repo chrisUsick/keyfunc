@@ -42,6 +42,6 @@ func (j *JWKS) KeyFunc(token *jwt.Token) (interface{}, error) {
 	case ps256, ps384, ps512, rs256, rs384, rs512:
 		return jsonKey.RSA()
 	default:
-		return nil, fmt.Errorf("%w: %s: feel free to add a feature request or contribute to https://github.com/MicahParks/keyfunc", ErrUnsupportedKeyType, keyAlg)
+		return nil, fmt.Errorf("%w: %s: feel free to add a feature request or contribute to https://github.com/chrisUsick/keyfunc", ErrUnsupportedKeyType, keyAlg)
 	}
 }

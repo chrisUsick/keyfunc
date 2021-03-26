@@ -6,7 +6,7 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 
-	"github.com/MicahParks/keyfunc"
+	"github.com/chrisUsick/keyfunc"
 )
 
 func main() {
