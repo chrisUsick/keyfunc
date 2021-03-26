@@ -1,2 +1,4 @@
+github.com/MicahParks/keyfunc v0.3.1 h1:0HR8h86hNN5aOpaC0ur3xRiaVJ7MQkDRUGevMc0+sCA=
+github.com/MicahParks/keyfunc v0.3.1/go.mod h1:nJJXPT3GJ0/He+Sa5JpQcY5we0PxNRlPzJQqorDX0P0=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible h1:7qlOGliEKZXTDg6OTjfoBKDXWrumCAMpl/TFQ4/5kLM=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
