@@ -1,7 +1,6 @@
 package keyfunc_test
 
 import (
-	"embed"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -28,7 +27,7 @@ const (
 
 // exampleJWKS is an example JWKS with every supported key algorithm.
 //go:embed example_jwks.json
-var exampleJWKS embed.FS // TODO Make this not here because not everyone is on go 1.16?
+// var exampleJWKS embed.FS // TODO Make this not here because not everyone is on go 1.16?
 
 // TestJWKS performs a table test on the JWKS code.
 func TestJWKS(t *testing.T) {
@@ -36,7 +35,7 @@ func TestJWKS(t *testing.T) {
 	// Could add a test with an invalid JWKS endpoint.
 
 	// Create the testing HTTP server that hosts a JWKS endpoint at /example_jwks.json.
-	server := httptest.NewServer(http.FileServer(http.FS(exampleJWKS)))
+	server := httptest.NewServer(http.FileServer(http.Dir("./")))
 	defer server.Close()
 
 	// Create testing options.
@@ -150,7 +149,7 @@ func TestUnknownKIDRefresh(t *testing.T) {
 	}
 
 	// Create the HTTP test server.
-	server := httptest.NewServer(http.FileServer(http.FS(os.DirFS(tempDir))))
+	server := httptest.NewServer(http.FileServer(http.Dir(tempDir)))
 	defer server.Close()
 
 	// Create testing options.
